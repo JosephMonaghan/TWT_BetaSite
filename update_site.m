@@ -24,7 +24,7 @@ end
 
 %Figures location
 cd("Figures/")
-delete *.jpg
+delete *.png
 
 cd("/Users/josephmonaghan/Dropbox/BC SRIF TWT Shared Drive/TC Figures")
 status=copyfile("Figures",cur_folder+"/Figures");
