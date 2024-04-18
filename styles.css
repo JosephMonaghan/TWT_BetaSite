@@ -11,3 +11,14 @@ html, body {
     height: 100%;
     width: 100%;
 }
+
+.timeseries{
+    width: 500px;
+    height: 200px;
+    margin: 0px;
+}
+
+.leaflet-popup-content-wrapper{
+    min-width: 550px;
+    padding: 5px;
+}

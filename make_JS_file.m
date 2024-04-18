@@ -90,7 +90,8 @@ lats=lats(idx);
 longs=longs(idx);
 means=means(idx);
 cd Figures/
-pop_up_options="{minWidth: 500, autoClose: true, closeOnClick: true}";
+%pop_up_options="{minWidth: 500, autoClose: true, closeOnClick: true}";
+pop_up_options="{autoClose: true, closeOnClick: true}";
 opacity=0.75;
 for i=1:length(lat_long)
     next_line="const loc_"+i+" = L.circle(["+lats(i)+", "+longs(i)+"], {";
@@ -102,7 +103,9 @@ for i=1:length(lat_long)
     %Location name version
     else
     %Image version
-        next_line=next_line+"radius: "+concs_sz_matrix(i)+'}).addTo(map).bindPopup(''<img src="Figures/'+loc_name(i)+'.png", height="200px"/>'','+pop_up_options+');';
+        %next_line=next_line+"radius: "+concs_sz_matrix(i)+'}).addTo(map).bindPopup(''<img src="Figures/'+loc_name(i)+'.png" class=timeseries, height="200px"/>'','+pop_up_options+');';
+        next_line=next_line+"radius: "+concs_sz_matrix(i)+'}).addTo(map).bindPopup(''<img src="Figures/'+loc_name(i)+'.png" class=timeseries>'','+pop_up_options+');';
+    
     end
     if i==1
         export=next_line;
