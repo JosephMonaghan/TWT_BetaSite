@@ -30,7 +30,7 @@ cd("/Users/josephmonaghan/Dropbox/BC SRIF TWT Shared Drive/TC Figures")
 status=copyfile("Figures",cur_folder+"/Figures");
 
 if status ~=1
-    display("Figure copy failed, try again")
+    disp("Figure copy failed, try again")
 end
 cd(cur_folder)
 
